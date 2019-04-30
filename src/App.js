@@ -9,14 +9,35 @@ import TextContainer from './components/TextContainer';
 
 class App extends Component {
   // constructor
-
+    constructor(){
+      super()
+      this.state = {
   // updateColor
-
+      fontColor: 'black',
   // updateSize
-
+      fontSize: 12,
   // updateFamily
-
+      fontFamily: 'monospace',
   // updateEditStatus
+      allowEdit: 'true'
+  }
+}
+
+updateColor(val) {
+  this.setState({ fontColor: val });
+}
+
+updateSize(val) {
+  this.setState({ fontSize: val });
+}
+
+updateFamily(val) {
+  this.setState({ fontFamily: val });
+}
+
+updateEditStatus(val) {
+  this.setState({ allowEdit: val });
+}
 
   render() {
     return (
